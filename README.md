@@ -3,7 +3,9 @@
 This is working Sleep Detector project that detects whether the user sleeps or not. 
 
 OpenCV is used to get the frames from the webcamera (use different camera, mine is initialized as 1 `cv.VideoCapture()` )
+
 MediaPipe is used to detect the face landmarks (eyes, mouth e.t.c). This project only extracted two points of eye (the lower and higher point `upper_eye = landmarks[159], lower_eye = landmarks[145]` ) so that when their difference is lower than 4 it will track user as sleeping.
+
 Also, in order to get rid of the misses when user blinks, this project set the sleeping phase to 30 frames (if lower than nothing will appear ).
 Those it skips when user blinks.
 
